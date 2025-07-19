@@ -1,0 +1,24 @@
+{
+  "name": "martic-login-bau",
+  "version": "1.0.0",
+  "description": "Eine einfache statische Website, die anzeigt, dass der Login-Bereich sich im Bau befindet.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server . -p 3000 -o",
+    "start": "npx http-server . -p 8080",
+    "build": "echo \"Static site - no build needed\"",
+    "docker:build": "docker build -t martic-loginpage .",
+    "docker:run": "docker run -d -p 8080:80 --name martic-loginpage martic-loginpage",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:rebuild": "docker-compose down && docker-compose up -d --build"
+  },
+  "keywords": ["martic-solutions", "static-website", "docker", "nginx"],
+  "author": "Martic Solutions",
+  "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marticsolutions/login-bau"
+  }
+}

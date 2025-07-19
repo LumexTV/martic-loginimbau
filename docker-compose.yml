@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  loginpage:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: martic-loginpage
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    networks:
+      - nginx-proxy
+    environment:
+      - TZ=Europe/Berlin
+
+networks:
+  nginx-proxy:
+    external: true
