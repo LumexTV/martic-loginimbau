@@ -69,7 +69,7 @@
           </button>
 
           <button
-            onclick="scrollToKontakt()"
+            onclick="window.location.href='https://marticsolutions.de?scroll=kontakt'"
             class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full font-medium hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105 text-lg"
           >
             <i data-lucide="mail" class="inline-block mr-2" style="width: 20px; height: 20px;"></i>
@@ -116,20 +116,6 @@
     <script>
       // Initialize Lucide icons
       lucide.createIcons();
-      
-      // Scroll to kontakt section on main page (same logic as Landing Page Navbar)
-      function scrollToKontakt() {
-        // Navigate to main page
-        window.location.href = 'https://marticsolutions.de';
-        
-        // Wait for page load, then scroll
-        setTimeout(() => {
-          const element = document.getElementById('kontakt');
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 500);
-      }
     </script>
   </body>
 </html>
